@@ -4,6 +4,7 @@ from pathlib import Path
 from jinja2 import Template
 from collections import defaultdict
 from datetime import datetime
+import plotly.io as pio
 
 # Tus importaciones de otros módulos
 from theme_1 import theme_1
@@ -11,12 +12,7 @@ from .gaficas import _create_stacked_bar_chart, create_cumulative_stacked_bar_ch
 from app_state import EvaluationState
 from .data_model import ESTATUS_OPCIONES
 
-pio.kaleido.scope.chromium_args = (
-    "--headless",
-    "--no-sandbox",
-    "--disable-gpu",
-    "--single-process"
-)
+pio.kaleido.scope.chromium_args = ("--headless","--no-sandbox","--disable-gpu","--single-process")
 # -----------------------------------------------------------------------------
 # 1. CLASE PDF PERSONALIZADA
 # -----------------------------------------------------------------------------
@@ -380,6 +376,7 @@ def generate_robust_pdf_report(CUESTIONARIO, matrix_data, roadmap_data, global_k
 
 
     return bytes(pdf.output())
+
 
 
 
