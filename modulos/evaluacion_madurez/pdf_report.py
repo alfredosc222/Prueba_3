@@ -73,7 +73,7 @@ def _add_chart_to_pdf(pdf, chart_figure):
         pdf.image(img_bytes, w=pdf.w - 2 * pdf.l_margin)
         pdf.ln(5)
     except Exception as e:
-        pdf.set_font('DejaVu', 'I', 10)
+        pdf.set_font('DejaVu', '', 10)
         pdf.multi_cell(0, 6, f"(Error al generar el gráfico: {e})")
 
 # -----------------------------------------------------------------------------
@@ -303,7 +303,7 @@ def generate_robust_pdf_report(CUESTIONARIO, matrix_data, roadmap_data, global_k
 
     # Bucle para mostrar la evidencia en el PDF
     if not hitos_completados_con_evidencia:
-        pdf.set_font('DejaVu', 'I', 11)
+        pdf.set_font('DejaVu', '', 11)
         pdf.cell(0, 10, "Aún no se han registrado preguntas marcadas como 'Completada'.")
     else:
 
@@ -374,6 +374,7 @@ def generate_robust_pdf_report(CUESTIONARIO, matrix_data, roadmap_data, global_k
 
 
     return bytes(pdf.output())
+
 
 
 
