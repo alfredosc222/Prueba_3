@@ -69,7 +69,7 @@ def _add_chart_to_pdf(pdf, chart_figure):
     Esto evita duplicar este bloque de código.
     """
     try:
-        img_bytes = chart_figure.to_image(format="png", width=800, height=350, scale=2)
+        img_bytes = chart_figure.to_image(format="png", width=800, height=350, scale=2, engine="kaleido")
         pdf.image(img_bytes, w=pdf.w - 2 * pdf.l_margin)
         pdf.ln(5)
     except Exception as e:
@@ -374,6 +374,7 @@ def generate_robust_pdf_report(CUESTIONARIO, matrix_data, roadmap_data, global_k
 
 
     return bytes(pdf.output())
+
 
 
 
