@@ -1,0 +1,88 @@
+/* --- Fuentes y Estilos Generales --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display.swap');
+
+/* --- Layout y Componentes Específicos --- */
+
+/* Sangría para el submenú en la barra lateral */
+.sidebar-submenu {
+    margin-left: 1rem;
+}
+
+/* Contenedor para centrar botones */
+.center-button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Columna "pegajosa" para el panel de instrucciones */
+div[data-testid="stHorizontalBlock"] > div:nth-child(2) {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+}
+
+/* Tarjetas de Feedback Personalizadas */
+.feedback-warning {
+    background-color: #FFFBEB;
+    border-left: 5px solid #FBBF24;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+}
+.feedback-info {
+    background-color: #EFF6FF;
+    border-left: 5px solid #60A5FA;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+/* Regla para Tablets y pantallas más pequeñas (< 992px) */
+@media (max-width: 992px) {
+    /* Apila las columnas de st.columns para que no se amontonen */
+    div[data-testid="stHorizontalBlock"] {
+        flex-direction: column;
+    }
+    /* Opcional: Centra las columnas apiladas */
+    div[data-testid="stHorizontalBlock"] > div {
+        width: 100% !important;
+        margin: 0 auto;
+    }
+}
+
+/* Regla solo para Teléfonos Móviles (< 600px) */
+@media (max-width: 600px) {
+    /* Reduce el tamaño de los títulos principales para que quepan mejor */
+    h1 {
+        font-size: 28px !important;
+    }
+    h2 {
+        font-size: 22px !important;
+    }
+    h3 {
+        font-size: 18px !important;
+    }
+}
+
+/* Regla para Monitores MUY Anchos (> 1800px) */
+@media (min-width: 1800px) {
+    /* Limita el ancho del contenedor principal para evitar que el texto
+        se estire demasiado, mejorando la legibilidad. */
+    .main .block-container {
+        max-width: 1600px;
+        margin: auto;
+    }
+}
+
+/* Regla solo para Desktops y Laptops Estándar */
+@media (min-width: 993px) and (max-width: 1799px) {
+    /* Estilos específicos para este rango irían aquí */
+    /* Por ejemplo, podrías querer un tamaño de fuente específico */
+    body {
+        font-size: 16px; /* 1rem, generalmente el tamaño por defecto */
+    }
+}

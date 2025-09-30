@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="report_style.css">
+    <title>Reporte de Madurez</title>
+</head>
+<body>
+    <h1>Reporte de Madurez Tecnológica</h1>
+    
+    <main>
+        <h2>Resumen Ejecutivo</h2>
+        <div class="kpi-container">
+            <div class="kpi">
+                <span class="label">TRL Global Alcanzado</span>
+                <span class="value">{{ global_kpis.trl_global }}</span>
+            </div>
+            <div class="kpi">
+                <span class="label">Progreso General del Proyecto</span>
+                <span class="value">{{ global_kpis.progreso_general }}</span>
+            </div>
+            <div class="kpi">
+                <span class="label">Puntaje Total</span>
+                <span class="value">{{ global_kpis.puntaje_total }}</span>
+            </div>
+        </div>
+
+        <h2>Desempeño por Área de Desarrollo</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Área</th>
+                    <th>Puntaje Obtenido</th>
+                    <th>Progreso</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for eje, data in roadmap_data.items() | sort %}
+                <tr>
+                    <td>{{ eje }}</td>
+                    <td>{{ data.total_obtenido }} / {{ data.total_maximo }}</td>
+                    <td>
+                        {% set progreso = (data.total_obtenido / data.total_maximo * 100) if data.total_maximo > 0 else 0 %}
+                        {{ progreso | round(1) }}%
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Matriz de Madurez</h2>
+        <table class="maturity-matrix">
+            <thead>
+                <tr>
+                    <th class="eje-label">Área de Desarrollo</th>
+                    {% for i in range(1, 10) %}
+                        <th>TRL {{ i }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for eje, trls in matrix_data.items() | sort %}
+                <tr>
+                    <td class="eje-label">{{ eje }}</td>
+                    {% for i in range(1, 10) %}
+                        {% set trl_key = "TRL " + i|string %}
+                        {% set data = trls.get(trl_key, {"status": "Pendiente"}) %}
+                        {% set status_class = "status-" + data.status.lower().replace(" ", "-").replace("í", "i") %}
+                        <td class="{{ status_class }}">
+                            {{ data.status.replace("Falta Hito Crítico", "Hito").replace("Falta Puntaje", "Puntaje") }}
+                        </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2>Análisis Visual de la Última Sección</h2>
+        <img src="{{ chart_image_uri }}" class="chart">
+    </main>
+</body>
+</html>
+        
+        <h2>Análisis Visual de la Última Sección</h2>
+        <img src="{{ chart_image_uri }}" class="chart">
+    </main>
+</body>
+</html>

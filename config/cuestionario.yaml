@@ -1,0 +1,213 @@
+TRL 1-3:
+  baseline_trl: 0
+  siguiente_seccion: "TRL 4-6"
+  requisitos_por_trl:
+    TRL 1:
+      puntajes_minimos:
+        A. Concepto y Modelado: 5
+      hitos_criticos:
+        - "A.1"
+    TRL 2:
+      puntajes_minimos:
+        A. Concepto y Modelado: 10
+        B. Diseño y Fabricación: 5
+      hitos_criticos:
+        - "A.1"
+        - "B.2"
+    TRL 3:
+      puntajes_minimos:
+        A. Concepto y Modelado: 15
+        B. Diseño y Fabricación: 10
+        C. Pruebas y Validación: 15
+        D. Análisis tecnoeconómico: 8
+      hitos_criticos:
+        - "A.1"
+        - "B.2"
+        - "C.2"
+  preguntas:
+    - id: "A.1"
+      eje: "A. Concepto y Modelado"
+      hito: "A.1. Se han definido y documentado los principios científicos/ingeniería."
+      ponderacion: "Alta"
+    - id: "A.2"
+      eje: "A. Concepto y Modelado"
+      hito: "A.2. Se ha desarrollado un modelo numérico/analítico que simula la función principal."
+      ponderacion: "Media"
+    - id: "A.3"
+      eje: "A. Concepto y Modelado"
+      hito: "A.3. Se ha realizado un análisis de sensibilidad para identificar las variables de diseño que son críticas para el rendimiento y el riesgo."
+      ponderacion: "Alta"
+    - id: "B.1"
+      eje: "B. Diseño y Fabricación"
+      hito: "B.1. Existe un diseño CAD de los componentes y subsistemas clave."
+      ponderacion: "Media"
+    - id: "B.2"
+      eje: "B. Diseño y Fabricación"
+      hito: "B.2. Se ha fabricado un prototipo físico a escala de laboratorio."
+      ponderacion: "Alta"
+    - id: "C.1"
+      eje: "C. Pruebas y Validación"
+      hito: "C.1. Se han ejecutado pruebas documentadas en entorno de laboratorio."
+      ponderacion: "Alta"
+    - id: "C.2"
+      eje: "C. Pruebas y Validación"
+      hito: "C.2. Los resultados experimentales han sido utilizados para validar los supuestos del modelo numérico."
+      ponderacion: "Alta"
+    - id: "D.1"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.1. Se ha realizado una Estructura de Desglose de Costos (CBS) preliminar y se han identificado los principales riesgos de costo del concepto."
+      ponderacion: "Media"
+    - id: "D.2"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.2. Se ha realizado una estimación de orden de magnitud del LCOE para evaluar la plausibilidad económica."
+      ponderacion: "Media"
+    - id: "D.3"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.3. Se ha conducido un análisis inicial de riesgos no-técnicos (mercado, regulación, aceptabilidad)."
+      ponderacion: "Baja"
+
+TRL 4-6:
+  baseline_trl: 3
+  siguiente_seccion: "TRL 7-9"
+  requisitos_por_trl:
+    TRL 4:
+      puntajes_minimos:
+        A. Concepto y Modelado: 5
+        B. Diseño y Fabricación: 5
+        C. Pruebas y Validación: 5
+        D. Análisis tecnoeconómico: 4
+      hitos_criticos:
+        - "C.3"
+    TRL 5:
+      puntajes_minimos:
+        A. Concepto y Modelado: 10
+        B. Diseño y Fabricación: 10
+        C. Pruebas y Validación: 10
+        D. Análisis tecnoeconómico: 6
+      hitos_criticos:
+        - "C.3"
+        - "B.4"
+    TRL 6:
+      puntajes_minimos:
+        A. Concepto y Modelado: 12
+        B. Diseño y Fabricación: 10
+        C. Pruebas y Validación: 15
+        D. Análisis tecnoeconómico: 8
+      hitos_criticos:
+        - "C.3"
+        - "B.4"
+        - "C.5"
+  preguntas:
+    - id: "A.4"
+      eje: "A. Concepto y Modelado"
+      hito: "A.4. El modelo numérico ha sido validado y calibrado con datos experimentales."
+      ponderacion: "Media"
+    - id: "A.5"
+      eje: "A. Concepto y Modelado"
+      hito: "A.5. El modelo ha sido utilizado para simular la matriz de potencia y la supervivencia en estados de mar extremos."
+      ponderacion: "Media"
+    - id: "B.3"
+      eje: "B. Diseño y Fabricación"
+      hito: "B.3. Se ha completado el diseño de ingeniería detallado (planos de fabricación)."
+      ponderacion: "Alta"
+    - id: "B.4"
+      eje: "B. Diseño y Fabricación"
+      hito: "B.4. El diseño del prototipo ha sido formalmente iterado basándose en los hallazgos de modelado o pruebas previas."
+      ponderacion: "Alta"
+    - id: "C.3"
+      eje: "C. Pruebas y Validación"
+      hito: "C.3. Se ha probado el prototipo integrado en un entorno relevante (tanque de olas)."
+      ponderacion: "Alta"
+    - id: "C.4"
+      eje: "C. Pruebas y Validación"
+      hito: "C.4. Se ha realizado un Análisis de Modos de Falla y Efectos (AMFE/FMEA) y se ha desarrollado un plan de mitigación para los riesgos críticos."
+      ponderacion: "Alta"
+    - id: "C.5"
+      eje: "C. Pruebas y Validación"
+      hito: "C.5. El prototipo ha operado de forma continua y exitosa en un entorno operacional por un periodo representativo."
+      ponderacion: "Alta"
+    - id: "D.4"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.4. Se ha refinado la CBS con costos basados en cotizaciones de proveedores."
+      ponderacion: "Alta"
+    - id: "D.5"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.5. Se ha desarrollado un modelo LCOE intermedio que identifica las rutas críticas para la reducción de costos."
+      ponderacion: "Alta"
+    - id: "D.6"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.6. Se ha realizado una evaluación formal de los criterios TPL con una puntuación justificada por área."
+      ponderacion: "Media"
+
+TRL 7-9:
+  baseline_trl: 6
+  siguiente_seccion: "finalizado"
+  requisitos_por_trl:
+    TRL 7:
+      puntajes_minimos:
+        A. Concepto y Modelado: 0
+        B. Diseño y Fabricación: 3
+        C. Pruebas y Validación: 18
+        D. Análisis tecnoeconómico: 6
+      hitos_criticos:
+        - "D.7"
+    TRL 8:
+      puntajes_minimos:
+        A. Concepto y Modelado: 0
+        B. Diseño y Fabricación: 6
+        C. Pruebas y Validación: 36
+        D. Análisis tecnoeconómico: 10
+      hitos_criticos:
+        - "D.7"
+        - "C.8"
+    TRL 9:
+      puntajes_minimos:
+        A. Concepto y Modelado: 0
+        B. Diseño y Fabricación: 9
+        C. Pruebas y Validación: 54
+        D. Análisis tecnoeconómico: 15
+      hitos_criticos:
+        - "D.7"
+        - "C.8"
+        - "D.9"
+  preguntas:
+    - id: "B.5"
+      eje: "B. Diseño y Fabricación"
+      hito: "B.5. Se ha establecido y calificado una cadena de suministro para los componentes críticos."
+      ponderacion: "Alta"
+    - id: "C.6"
+      eje: "C. Pruebas y Validación"
+      hito: "C.6. Se ha instalado y puesto en marcha un prototipo a escala real en un entorno operacional."
+      ponderacion: "Alta"
+    - id: "C.7"
+      eje: "C. Pruebas y Validación"
+      hito: "C.7. Se ha validado la matriz de potencia del dispositivo con datos de campo."
+      ponderacion: "Alta"
+    - id: "C.8"
+      eje: "C. Pruebas y Validación"
+      hito: "C.8. El prototipo ha completado una campaña de pruebas extendida (>6 meses), demostrando su fiabilidad y disponibilidad."
+      ponderacion: "Alta"
+    - id: "C.9"
+      eje: "C. Pruebas y Validación"
+      hito: "C.9. Se han validado en campo las estrategias y el modelo de riesgo operacional de O&M."
+      ponderacion: "Alta"
+    - id: "C.10"
+      eje: "C. Pruebas y Validación"
+      hito: "C.10. Un arreglo pre-comercial (multi-dispositivo) ha operado exitosamente."
+      ponderacion: "Alta"
+    - id: "C.11"
+      eje: "C. Pruebas y Validación"
+      hito: "C.11. Se ha demostrado el cumplimiento con los códigos de red y requisitos de interconexión."
+      ponderacion: "Alta"
+    - id: "D.7"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.7. Se ha actualizado el modelo LCOE y la CBS con costos reales y datos de rendimiento iniciales, validando las suposiciones de riesgo de la etapa TRL 4-6."
+      ponderacion: "Media"
+    - id: "D.8"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.8. Se ha desarrollado un caso de negocio detallado para el WEC, incluyendo un análisis de riesgo financiero y un LCOE refinado."
+      ponderacion: "Media"
+    - id: "D.9"
+      eje: "D. Análisis tecnoeconómico"
+      hito: "D.9. Se ha consolidado un plan de negocio 'bancable' (bankable), validado por una tercera parte independiente y listo para presentarse a comités de riesgo de inversionistas."
+      ponderacion: "Baja"
